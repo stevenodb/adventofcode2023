@@ -1,7 +1,6 @@
 package day01
 
 import io.kotest.core.spec.style.FunSpec
-import io.kotest.inspectors.forAll
 import io.kotest.matchers.shouldBe
 
 class Day201KtTest : FunSpec({
@@ -15,10 +14,10 @@ class Day201KtTest : FunSpec({
         parseCalibrationValues(listOf("1abc2")) shouldBe 12
     }
     test("part 2 calibration fivethreeonezblqnsfk1") {
-        parseCalibrationValues(listOf("fivethreeonezblqnsfk1"), ::digitStringMapper) shouldBe 51
+        parseCalibrationValues(listOf("fivethreeonezblqnsfk1"), ::firstDigitStringMapper) shouldBe 51
     }
     test("part 2 calibration two1nine") {
-        parseCalibrationValues(listOf("two1nine"), ::digitStringMapper) shouldBe 29
+        parseCalibrationValues(listOf("two1nine"), ::firstDigitStringMapper) shouldBe 29
     }
     test("part 2 example input") {
         val values = """two1nine
@@ -29,6 +28,6 @@ class Day201KtTest : FunSpec({
             zoneight234
             7pqrstsixteen
         """.trimIndent().lines()
-        parseCalibrationValues(values, ::digitStringMapper) shouldBe 281
+        parseCalibrationValues(values, ::firstDigitStringMapper) shouldBe 281
     }
 })
